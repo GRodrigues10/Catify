@@ -25,7 +25,7 @@ const searchData = async () => {
 };
 
 function FetchData() {
-    let audio = new Audio('meow.m4a');
+    let audio = new Audio('../assets/meow.m4a');
     audio.play(); 
     const res = document.getElementById('res');
     res.style.display = 'grid'; 

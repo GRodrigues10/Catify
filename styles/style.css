@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-body{
-   background-color: rgba(165, 143, 95, 0.37); 
+body {
+    background-color: rgba(165, 143, 95, 0.37); 
 }
 
 .container {
@@ -26,7 +26,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 800px;
+    height: 100vh; /* Altura total da tela */
     background-position: center center;
     display: flex;
     flex-direction: column;
@@ -34,11 +34,6 @@ body{
     justify-content: center;
     font-family: cursive;
     transition: box-shadow 0.3s ease-in-out; /* Transição suave para a sombra */
-}
-
-/* Sombra interna apenas na parte inferior */
-.image.scrolled {
-    box-shadow: inset 0 -100px 20px -10px rgba(0, 0, 0, 0.301); /* Sombra interna só na parte de baixo */
 }
 
 h1 {
@@ -78,11 +73,23 @@ h1 {
     width: 100%;
 }
 
+/* Contêiner de imagens usando Grid */
 .res {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    justify-items: center;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 700px;
-    margin-top: 50px;
+    width:90%;
+    height: auto;
+    margin-top: 40px; /* Ajuste esse valor conforme necessário */
+    display: none;
+}
+
+/* Estilo das imagens */
+.res img {
+    width: 100%;  /* A imagem vai ocupar toda a largura disponível da célula */
+    height: 300px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Faz com que a imagem ocupe toda a área do contêiner */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
 }

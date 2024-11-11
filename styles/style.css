@@ -1,20 +1,16 @@
-
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+body{
+   background-color: rgba(165, 143, 95, 0.37); 
 }
 
 .container {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -29,14 +25,20 @@ body, html {
     background-image: url(../assets/cat.jpg);
     background-size: cover;
     background-attachment: fixed;
-    width: 100%; 
-    height: 750px;
+    width: 100%;
+    height: 800px;
     background-position: center center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: cursive;
+    transition: box-shadow 0.3s ease-in-out; /* Transição suave para a sombra */
+}
+
+/* Sombra interna apenas na parte inferior */
+.image.scrolled {
+    box-shadow: inset 0 -100px 20px -10px rgba(0, 0, 0, 0.301); /* Sombra interna só na parte de baixo */
 }
 
 h1 {
@@ -58,7 +60,7 @@ h1 {
     color: white;
     text-shadow: 1px 1px 1px black;
     cursor: pointer;
-    transition: .5s ease;
+    transition: 0.5s ease;
     position: relative;
     top: 50px;
 }
@@ -73,15 +75,14 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%; 
+    width: 100%;
 }
 
 .res {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%; 
-    max-width: 700px; 
+    width: 100%;
+    max-width: 700px;
     margin-top: 50px;
-    text-align: justify;
 }

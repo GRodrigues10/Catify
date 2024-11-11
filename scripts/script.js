@@ -4,7 +4,6 @@ const URL = `https://api.thecatapi.com/v1/images/search?limit=9&api_key=${API_KE
 // Busca as imagens na API
 const searchData = async () => {
     const res = document.getElementById('res');
-    
     try {
         const response = await fetch(URL);
         if (!response.ok) {
@@ -21,18 +20,14 @@ const searchData = async () => {
             });
         }
     } catch (error) {
-        res.innerHTML = 'ERROR!';
+        res.innerHTML = 'ERRO!';
     }
 };
 
-
 function FetchData() {
-    let audio = new Audio('../assets/meow.m4a');
+    let audio = new Audio('meow.m4a');
     audio.play(); 
-
-   
     const res = document.getElementById('res');
     res.style.display = 'grid'; 
-
     searchData(); 
 }

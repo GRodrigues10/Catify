@@ -30,4 +30,4 @@ function FetchData() {
     const res = document.getElementById('res');
     res.style.display = 'grid'; 
     searchData(); 
-}
+}  

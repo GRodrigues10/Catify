@@ -17,6 +17,7 @@ const searchData = async () => {
                 img.src = e.url;
                 img.alt = 'Cats Images';
                 res.appendChild(img); 
+                console.log(e);
             });
         }
     } catch (error) {
